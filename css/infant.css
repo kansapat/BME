@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* ตั้งค่าเริ่มต้นสำหรับทุกองค์ประกอบ */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* ตั้งค่าพื้นหลัง */
+    background: url(https://today-obs.line-scdn.net/0hjDkYccGCNWtWIByuAudKPGx2NgRlTCZoMhZkaApOa18sQHE5Yk57BXUmO1p5GHI1OE59CHUmLlopRSY0a097/w1200);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*backdrop-filter: grayscale(100000%);;
+    /*border-top: 40px solid black; /* ขอบด้านบน */
+    /*border-bottom: 40px solid black; /* ขอบด้านล่าง */
+    /*width: 100%; /* ทำให้ขอบเต็มความกว้าง */
+    /*position: relative; /* ตำแหน่งสัมพัทธ์เพื่อใช้กับลูกเล่นอื่น ๆ */
+    /*z-index: 1; /* ให้ขอบอยู่เหนือองค์ประกอบอื่น */
+
+}
+
+.infant {
+    height: 400px;
+    width: 850px;
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    color: rgba(0, 0, 0, 0.86);
+    box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.2);
+    border-radius: 20px;
+    margin-left: 15px;
+    position: relative; /* อนุญาตให้มีการจัดตำแหน่งของ pseudo-element */
+}
+
+.infant::before {
+    content: '';
+    position: absolute; /* การจัดตำแหน่งภายในกล่อง .infant */
+    top: 55px;
+    bottom: 55px;
+    left: 60%; /* จัดให้อยู่กลาง */
+    width: 2px; /* เพิ่มความกว้างของเส้นเพื่อให้มุมกลมชัดเจน */
+    background-color: #77777738; /* สีของเส้น */
+    transform: translateX(-50%); /* จัดให้อยู่กลางเส้น */
+    border-radius: 2px; /* ทำให้มุมของเส้นกลม */
+}
+
+
+.re {
+    color: #ffffff; /* สีข้อความ */
+    font-size: 15px; /* ขนาดฟอนต์ 10px *//* จัดข้อความกลาง */
+    font-family: 'Roboto Flex', sans-serif; /* ฟอนต์ที่ใช้ */
+    margin: 40px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
+    text-align: center;
+}
+
+.re1 {
+    width: 100%; /* ใช้ความกว้างเต็มที่ */
+    height: 0; /* เริ่มต้นจากความสูง 0 */
+    background-color: #39aaaac4; /* พื้นหลังที่เหมือนกับกล่องหลัก */
+    box-shadow: 5px 5px 15px rgba(27, 27, 27, 0.2);
+    border-radius: 20px;
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    transition: 0.5s ease;
+    z-index: 2; /* การเปลี่ยนแปลงความสูงและตำแหน่ง */
+}
+
+/* ปรับให้กล่องแสดงผลเมื่อมีการกดปุ่ม */
+.infant.active .re1 {
+    height: 600px; /* ขยายความสูงเมื่อมีการคลิก */
+    transform: translateY(-420px); /* เลื่อนขึ้นเล็กน้อย */
+}
+.img {
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    height: 100%; /* ให้ภาพมีความสูงเต็มกล่อง */
+    position: absolute; /* ใช้ตำแหน่ง absolute เพื่อจัดภาพภายในกล่อง */
+    top: 50%; /* เลื่อนขึ้นไปกลางกล่อง */
+    left: 80%; /* เลื่อนไปกลางกล่อง */
+    transform: translate(-50%, -50%); /* ย้ายภาพไปกลางกล่อง */
+    z-index: 1; /* ทำให้ภาพอยู่เหนือกล่องข้อความ */
+}
+
+.img img {
+    width: 220px; /* กำหนดความกว้างของรูปภาพ */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+}
+
+
+.col-1{
+    padding: 5rem 4rem;
+    margin-left: -360px;
+}
+h2{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.input-group input{
+    width: 100px;
+    height: 20px;
+    border-radius: 0.9rem;
+    font-size: 8px;
+    font-weight: 400;
+    text-align: center;
+    border: 0.5px solid;
+    background-color: rgba(229, 223, 223, 0.315);
+    margin-bottom: 10px;
+}
+.input-group1 {
+    display: flex;
+    flex-direction: colum;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 30px;
+}
+.input-group1 input{
+    width: 100px;
+    height: 20px;
+    border-radius: 0.9rem;
+    font-size: 8px;
+    font-weight: 400;
+    text-align: center;
+    border: 0.5px solid;
+    background-color:rgba(229, 223, 223, 0.315);
+}
+
+.input-group2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group2 select {
+    width: 200px;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #79797979; /* สีพื้นหลังของ select */
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    outline: none; /* เอาเส้นขอบตอนคลิกออก */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+form button{
+    padding: 10px 30px;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    border: 3px solid transparent;
+    background-color: #14f7ff;
+    color: rgba(255, 255, 255, 0.849);
+    box-shadow: 2px 2px 10px rgba(171, 172, 179, 0.411);
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex; /* ใช้ flexbox เพื่อให้สามารถจัดตำแหน่งได้ */
+    align-items: center; /* จัดแนวกลางในแนวดิ่ง */
+    justify-content: center;
+    margin: auto;
+    border: 0.5px solid;
+    margin-bottom: 20px;
+}
